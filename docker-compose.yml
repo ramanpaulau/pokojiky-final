@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  api:
+    depends_on:
+      - db
+    build: ./src/api
+    ports:
+      - 8080:8080
+    restart: always
+
+  client:
+    depends_on: 
+        - api
+    build: ./src/client
+    ports:
+      - 80:80
+    restart: always
+
+  db:
+    image: postgres:alpine
+    ports:
+        - 5432:5432
+    restart: always
+    environment:
+        POSTGRES_PASSWORD: password
+
+  adminer:
+    image: adminer
+    ports:
+        - 8081:8080
+    restart: always

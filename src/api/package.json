@@ -1,0 +1,33 @@
+{
+   "name": "pokojiky-api",
+   "version": "0.0.0",
+   "description": "Seminar project",
+   "main": "index.js",
+   "scripts": {
+      "lint": "eslint . --ext .ts",
+      "build": "tsc --project tsconfig.json",
+      "start": "node ./build/index.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "author": "",
+   "license": "ISC",
+   "devDependencies": {
+      "@types/node": "^8.0.29",
+      "@typescript-eslint/eslint-plugin": "^2.29.0",
+      "@typescript-eslint/parser": "^2.29.0",
+      "cors": "^2.8.5",
+      "eslint": "^6.8.0",
+      "express": "^4.17.1",
+      "pg": "^8.0.3",
+      "reflect-metadata": "^0.1.13",
+      "typeorm": "^0.2.24",
+      "typescript": "3.3.3333"
+   },
+   "dependencies": {
+      "bcryptjs": "^2.4.3",
+      "express-fileupload": "^1.1.7-alpha.3",
+      "jsonwebtoken": "^8.5.1",
+      "lodash": "^4.17.15",
+      "morgan": "^1.10.0"
+   }
+}
